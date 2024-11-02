@@ -102,7 +102,7 @@ python inference_lap.py \
   --thresh_2=0.6                     # value for threshold 2
 ```
 
-Detection and classification weights can be found [here](https://drive.google.com/drive/folders/1t62qPpnjR8Fas6SKNh-9ScoatH8SgETM?usp=drive_link) and [here](https://drive.google.com/drive/folders/19qtdIplTlH0fuEhyLhQcSSEEtZN32A46?usp=sharing).
+Our detection weights can be found [here](https://drive.google.com/drive/folders/1t62qPpnjR8Fas6SKNh-9ScoatH8SgETM?usp=drive_link) and our classification weights [here](https://drive.google.com/drive/folders/19qtdIplTlH0fuEhyLhQcSSEEtZN32A46?usp=sharing).
 
 ### Evaluate tracking performance
 The python library `py-motmetrics` was used to compute MOT metrics (https://github.com/cheind/py-motmetrics).
