@@ -33,13 +33,14 @@ python train_yolov8.py
 Note that the number of epochs is hardcoded inside the script. The file `det.yaml` contains the path to the training and validation sets. 
 
 After 500 epochs, the following results were obtained.
-| Model    | #Epochs | Training time |    P   |    R   |  AP50  | AP50-95 |  Size   |
-|----------|---------|---------------|--------|--------|--------|---------|---------|
-| YOLOv8n  |   500   |    33 min     | 0.957  | 0.948  | 98.3%  | 86.3%   |  6.3 MB |
-| YOLOv8s  |   500   |    37 min     | 0.946  | 0.956  | 98.6%  | 88.0%   | 22.5 MB |
-| YOLOv8m  |   500   |    50 min     | 0.953  | 0.965  | 98.5%  | 89.7%   | 52.0 MB |
-| YOLOv8l  |   500   |  1 h 5 min    | 0.958  | 0.963  | 98.3%  | 89.8%   | 87.7 MB |
-| YOLOv8x  |   500   | 1 h 28 min    | 0.962  | 0.962  | 98.4%  | 89.8%   | 137.7 MB |
+| Model   | Epochs | Time   |   P   |   R   |  AP50  | AP50-95 |  Size  |
+|---------|--------|--------|-------|-------|--------|---------|--------|
+| YOLOv8n |  500   | 33m    | 0.957 | 0.948 | 98.3%  | 86.3%   | 6.3MB  |
+| YOLOv8s |  500   | 37m    | 0.946 | 0.956 | 98.6%  | 88.0%   | 22.5MB |
+| YOLOv8m |  500   | 50m    | 0.953 | 0.965 | 98.5%  | 89.7%   | 52.0MB |
+| YOLOv8l |  500   | 1h 5m  | 0.958 | 0.963 | 98.3%  | 89.8%   | 87.7MB |
+| YOLOv8x |  500   | 1h 28m | 0.962 | 0.962 | 98.4%  | 89.
+
 
 ### Classifier
 To train the classifier, the following script is used for all model sizes:
@@ -49,56 +50,13 @@ python train_yolov8-cls.py
 Note that the paths to the training and validation sets, and the number of epochs are hardcoded.
 
 After 1,000 epochs, the following results were obtained.
-<table style="font-size: 0.8em;">
-  <tr>
-    <th>Model</th>
-    <th>Epochs</th>
-    <th>Time</th>
-    <th>Top1</th>
-    <th>Top5</th>
-    <th>Size</th>
-  </tr>
-  <tr>
-    <td>YOLOv8n-cls</td>
-    <td>1,000</td>
-    <td>3h 7m</td>
-    <td>0.873</td>
-    <td>0.988</td>
-    <td>3.0MB</td>
-  </tr>
-  <tr>
-    <td>YOLOv8s-cls</td>
-    <td>1,000</td>
-    <td>3h 21m</td>
-    <td>0.898</td>
-    <td>0.992</td>
-    <td>10.3MB</td>
-  </tr>
-  <tr>
-    <td>YOLOv8m-cls</td>
-    <td>1,000</td>
-    <td>4h 33m</td>
-    <td>0.898</td>
-    <td>0.993</td>
-    <td>31.7MB</td>
-  </tr>
-  <tr>
-    <td>YOLOv8l-cls</td>
-    <td>1,000</td>
-    <td>6h 56m</td>
-    <td>0.917</td>
-    <td>0.993</td>
-    <td>72.6MB</td>
-  </tr>
-  <tr>
-    <td>YOLOv8x-cls</td>
-    <td>1,000</td>
-    <td>8h 50m</td>
-    <td>0.916</td>
-    <td>0.993</td>
-    <td>112.5MB</td>
-  </tr>
-</table>
+| Model      | Epochs | Time    | Top1 | Top5 | Size  |
+|------------|--------|---------|------|------|-------|
+| YOLOv8n-cls| 1,000  | 3h 7m   | 0.873| 0.988| 3.0MB |
+| YOLOv8s-cls| 1,000  | 3h 21m  | 0.898| 0.992| 10.3MB|
+| YOLOv8m-cls| 1,000  | 4h 33m  | 0.898| 0.993| 31.7MB|
+| YOLOv8l-cls| 1,000  | 6h 56m  | 0.917| 0.993| 72.6MB|
+| YOLOv8x-cls| 1,000  | 8h 50m  | 0.916| 0.993| 112.5MB|
 
 
 ## Test
