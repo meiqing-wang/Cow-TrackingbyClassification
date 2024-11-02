@@ -26,7 +26,7 @@ Monitoring individual dairy cattle for behavior, health status, and production i
 
 ## Train
 ### Object detector
-To train the object detector, the following script is used for all model sizes.
+To train the object detector, the script `train_yolov8.py` is used for all model sizes.
 ```sh
 python train_yolov8.py
 ```
@@ -43,7 +43,7 @@ After 500 epochs, the following results were obtained.
 
 
 ### Classifier
-To train the classifier, the following script is used for all model sizes:
+To train the classifier, the script `train_yolov8-cls.py` is used for all model sizes.
 ```sh
 python train_yolov8-cls.py
 ```
@@ -61,7 +61,12 @@ After 1,000 epochs, the following results were obtained.
 
 ## Test
 ### Running the inference
-
+To run the model on a custom video, the script `inference_lap.py` is called.
+```sh
+python inference_lap.py \\
+-i path/to/input_video.mp4  # original video
+-o path/to/output_video.mp4 # with predicted bounding boxes
+```
 
 ## Results
 
