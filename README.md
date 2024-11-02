@@ -14,6 +14,7 @@ The code is built using PyTorch and has been tested on Ubuntu 22.04 environment 
     - [Classifier](#classifier)
   - [Test](#test)
     - [Running the inference](#running-the-inference)
+    - [Evaluating tracking performance](#evaluating-tracking-performance)
   - [Results](#results)
   - [Demos](#demos)
     - [Demos of the video during the day](#demos-of-the-video-during-the-day)
@@ -66,10 +67,14 @@ To run the model on a custom video, use the script `inference_lap.py`.
 python inference_lap.py \
 --video_input=input_video.mp4 \    # input video
 --video_output=output_video.mp4 \  # output video with predicted bounding boxes
---output_file=hypotheses.txt \     # text files containing the predicted bounding boxes (hypothesis)
+--output_file=hypothesis.txt \     # text files containing the predicted bounding boxes (hypothesis)
 --thresh_1=0.9 \                   # value for threshold 1
 --thresh_2=0.6                     # value for threshold 2
 ```
+
+### Evaluating tracking performance
+The python library `motmetrics` was used to compute the MOT metrics.
+
 
 ## Results
 
