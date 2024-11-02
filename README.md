@@ -63,9 +63,9 @@ After 1,000 epochs, the following results were obtained.
 ### Running the inference
 To run the model on a custom video, the script `inference_lap.py` is called.
 ```sh
-python inference_lap.py \\
--i path/to/input_video.mp4  # original video
--o path/to/output_video.mp4 # with predicted bounding boxes
+python inference_lap.py \
+-i path/to/input_video.mp4 \  # original video
+-o path/to/output_video.mp4   # with predicted bounding boxes
 ```
 
 ## Results
