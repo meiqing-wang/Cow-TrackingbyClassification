@@ -15,12 +15,12 @@ The code is built using PyTorch and has been tested on Ubuntu 22.04 environment 
     - [Object detector](#object-detector)
     - [Classifier](#classifier)
   - [Test](#test)
-    - [Running the tracking inference](#running-the-tracking-inference)
-    - [Evaluating tracking performance](#evaluating-tracking-performance)
+    - [Run the tracking model](#run-the-tracking-model)
+    - [Evaluate tracking performance](#evaluate-tracking-performance)
   - [Results](#results)
     - [Object detector](#object-detector-1)
     - [Classifier](#classifier-1)
-    - [Tracking](#tracking)
+    - [Tracking model](#tracking-model)
   - [Demos](#demos)
     - [Demos of the video during the day](#demos-of-the-video-during-the-day)
   - [Acknowledgements](#acknowledgements)
@@ -46,7 +46,7 @@ python train_yolov8-cls.py
 Note that the paths to the training and validation sets, and the number of epochs are hardcoded.
 
 ## Test
-### Running the tracking inference
+### Run the tracking model
 To run the tracking model on a custom video, use the script `inference_lap.py`.
 ```sh
 python inference_lap.py \
@@ -57,7 +57,7 @@ python inference_lap.py \
   --thresh_2=0.6                     # value for threshold 2
 ```
 
-### Evaluating tracking performance
+### Evaluate tracking performance
 The python library `motmetrics` was used to compute the MOT metrics.
 
 To get the MOT metrics of a video, run `master_eval.sh`.
@@ -71,7 +71,7 @@ sh master_eval.sh \
 
 ## Results
 ### Object detector
-After 500 epochs, the following results were obtained.
+Results obtained after 500 epochs.
 | Model   | Epochs | Time   |   P   |   R   |  AP50  | AP50-95 |  Size  |
 |---------|--------|--------|-------|-------|--------|---------|--------|
 | YOLOv8n |  500   | 33 m    | 0.957 | 0.948 | 98.3%  | 86.3%   | 6.3MB  |
@@ -81,7 +81,7 @@ After 500 epochs, the following results were obtained.
 | YOLOv8x |  500   | 1 h 28 m | 0.962 | 0.962 | 98.4%  | 89.8%   | 137.7MB|
 
 ### Classifier
-After 1,000 epochs, the following results were obtained.
+Results obtained after 1,000 epochs.
 | Model      | Epochs | Time    | Top1 | Top5 | Size  |
 |------------|--------|---------|------|------|-------|
 | YOLOv8n-cls| 1,000  | 3 h 7 m | 0.873| 0.988| 3.0MB |
@@ -90,7 +90,16 @@ After 1,000 epochs, the following results were obtained.
 | YOLOv8l-cls| 1,000  | 6 h 56 m  | 0.917| 0.993| 72.6MB|
 | YOLOv8x-cls| 1,000  | 8 h 5 0m  | 0.916| 0.993| 112.5MB|
 
-### Tracking
+### Tracking model
+Results obtained on 6 videos of different duration.
+| # | Video Duration | Time  | Animals | Camera | Reappearances |   MOTA  |   IDF1  |   HOTA  | MT | ML | IDSW |
+|---|----------------|-------|---------|--------|---------------|---------|---------|---------|----|----|------|
+| 1 | 00:05:00      | Day   |   13    |   1    |       0       | 0.8702  | 0.9305  | 0.9158  | 11 |  1 |  19  |
+| 2 | 00:05:00      | Night |   10    |   2    |       4       | 0.9434  | 0.9712  | 0.9686  |  9 |  1 |  1   |
+| 3 | 00:30:01      | Day   |   11    |   2    |      12       | 0.9771  | 0.9883  | 0.9828  | 10 |  1 |  34  |
+| 4 | 00:30:00      | Night |   11    |   1    |      10       | 0.7725  | 0.8918  | 0.8701  | 10 |  0 |  280 |
+| 5 | 01:00:01      | Day   |   11    |   2    |      29       | 0.9381  | 0.9666  | 0.9421  | 10 |  0 |  448 |
+| 6 | 01:00:01      | Night |   13    |   1    |      32       | 0.8635  | 0.9261  | 0.8925  | 10 |  0 |  545 |
 
 ## Demos
 
