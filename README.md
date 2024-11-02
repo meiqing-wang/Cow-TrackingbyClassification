@@ -47,7 +47,7 @@ Note that the paths to the training and validation sets, and the number of epoch
 
 ## Test
 ### Run the tracking model
-To run the tracking model on a custom video, use the script `inference_lap.py`.
+To run the tracking model on a video, use the script `inference_lap.py`.
 ```sh
 python inference_lap.py \
   --video_input=input_video.mp4 \    # input video
@@ -63,7 +63,7 @@ The python library `motmetrics` was used to compute the MOT metrics.
 To get the MOT metrics of a video, run `master_eval.sh`.
 ```sh
 sh master_eval.sh \
-  /path/to/video_labels \
+  /path/to/video_labels \    # labels (GT) of the video
   /path/to/eval_folder \     # folder where to store temporary files
   /path/to/hypothesis.txt \  # hypothesis file generated during tracking
   /video_name                # give a name to the video (required)
@@ -92,14 +92,14 @@ Results obtained after 1,000 epochs.
 
 ### Tracking model
 Results obtained on 6 videos of different duration.
-| # | Video Duration | Time  | Animals | Camera | Reappearances |   MOTA  |   IDF1  |   HOTA  | MT | ML | IDSW |
-|---|----------------|-------|---------|--------|---------------|---------|---------|---------|----|----|------|
-| 1 | 00:05:00      | Day   |   13    |   1    |       0       | 0.8702  | 0.9305  | 0.9158  | 11 |  1 |  19  |
-| 2 | 00:05:00      | Night |   10    |   2    |       4       | 0.9434  | 0.9712  | 0.9686  |  9 |  1 |  1   |
-| 3 | 00:30:01      | Day   |   11    |   2    |      12       | 0.9771  | 0.9883  | 0.9828  | 10 |  1 |  34  |
-| 4 | 00:30:00      | Night |   11    |   1    |      10       | 0.7725  | 0.8918  | 0.8701  | 10 |  0 |  280 |
-| 5 | 01:00:01      | Day   |   11    |   2    |      29       | 0.9381  | 0.9666  | 0.9421  | 10 |  0 |  448 |
-| 6 | 01:00:01      | Night |   13    |   1    |      32       | 0.8635  | 0.9261  | 0.8925  | 10 |  0 |  545 |
+| # | Duration | Time  | Animals | Camera | Reappearances |   MOTA  |   IDF1  |   HOTA  | MT | ML | IDSW |
+|---|----------|-------|---------|--------|---------------|---------|---------|---------|----|----|------|
+| 1 | 00:05:00 | Day   |   13    |   1    |       0       | 0.8702  | 0.9305  | 0.9158  | 11 |  1 |  19  |
+| 2 | 00:05:00 | Night |   10    |   2    |       4       | 0.9434  | 0.9712  | 0.9686  |  9 |  1 |  1   |
+| 3 | 00:30:01 | Day   |   11    |   2    |      12       | 0.9771  | 0.9883  | 0.9828  | 10 |  1 |  34  |
+| 4 | 00:30:00 | Night |   11    |   1    |      10       | 0.7725  | 0.8918  | 0.8701  | 10 |  0 |  280 |
+| 5 | 01:00:01 | Day   |   11    |   2    |      29       | 0.9381  | 0.9666  | 0.9421  | 10 |  0 |  448 |
+| 6 | 01:00:01 | Night |   13    |   1    |      32       | 0.8635  | 0.9261  | 0.8925  | 10 |  0 |  545 |
 
 ## Demos
 
