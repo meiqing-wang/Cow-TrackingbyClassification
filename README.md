@@ -80,10 +80,10 @@ The python library `motmetrics` was used to compute the MOT metrics.
 To get the MOT metrics of a video, run `master_eval.sh`.
 ```sh
 sh master_eval.sh \
-  /path/to/video_labels
-  /path/to/eval_folder    # folder where to store temporary files
-  /path/to/hypothesis.txt # hypothesis file generated during tracking
-  /video_name             # give a name to the video (required)
+  /path/to/video_labels \
+  /path/to/eval_folder \     # folder where to store temporary files
+  /path/to/hypothesis.txt \  # hypothesis file generated during tracking
+  /video_name                # give a name to the video (required)
 ```
 
 ## Results
