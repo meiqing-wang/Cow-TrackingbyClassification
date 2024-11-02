@@ -3,7 +3,7 @@
 
 This repository is for the manuscript titled "Continuous Tracking Holstein Dairy Cows in a Free-Stall Barn Using a Tracking-by-Classification Method," submitted to ***Computers and Electronics in Agriculture***. Please note that the data is currently unavailable but will be provided once the manuscript is accepted.
 
-The code is built using PyTorch and has been tested on Ubuntu 22.04 environment (Check: Python3.12.4, PyTorch2.3.1, CUDA11.8, cuDNN8.7) with 2*RTX 4090 GPUs. 
+The code is built using PyTorch and has been tested on Ubuntu 22.04 environment (Check: Python3.12.4, Ultralytics8.2.58, PyTorch2.3.1, CUDA11.8, cuDNN8.7) with 2*RTX 4090 GPUs. 
 
 ## Contents
 - [Cow-TrackingbyClassification](#cow-trackingbyclassification)
@@ -11,7 +11,9 @@ The code is built using PyTorch and has been tested on Ubuntu 22.04 environment 
   - [Introduction](#introduction)
   - [Train](#train)
     - [Object detector](#object-detector)
+    - [Classifier](#classifier)
   - [Test](#test)
+    - [Running the inference](#running-the-inference)
   - [Results](#results)
   - [Demos](#demos)
     - [Demos of the video during the day](#demos-of-the-video-during-the-day)
@@ -24,13 +26,30 @@ Monitoring individual dairy cattle for behavior, health status, and production i
 
 ## Train
 ### Object detector
-To train the object detector, the following script can be used to launch the trainings of each model sizes:
+To train the object detector, the following script is used for all model sizes.
 ```sh
 python train_yolov8.py
 ```
-Note that the number of epochs is hardcoded. The file `det.yaml` contains the path to the train and val sets. 
+Note that the number of epochs is hardcoded inside the script. The file `det.yaml` contains the path to the training and validation sets. 
+
+After 500 epochs, the following results were obtained.
+| Model    | #Epochs | Training time |    P   |    R   |  AP50  | AP50-95 |  Size   |
+|----------|---------|---------------|--------|--------|--------|---------|---------|
+| YOLOv8n  |   500   |    33 min     | 0.957  | 0.948  | 98.3%  | 86.3%   |  6.3 MB |
+| YOLOv8s  |   500   |    37 min     | 0.946  | 0.956  | 98.6%  | 88.0%   | 22.5 MB |
+| YOLOv8m  |   500   |    50 min     | 0.953  | 0.965  | 98.5%  | 89.7%   | 52.0 MB |
+| YOLOv8l  |   500   |  1 h 5 min    | 0.958  | 0.963  | 98.3%  | 89.8%   | 87.7 MB |
+| YOLOv8x  |   500   | 1 h 28 min    | 0.962  | 0.962  | 98.4%  | 89.8%   | 137.7 MB |
+
+### Classifier
+To train the classifier, the following script is used for all model sizes:
+```sh
+python train_yolov8-cls.py
+```
+Note that the paths to the training and validation sets, and the number of epochs are hardcoded.
 
 ## Test
+### Running the inference
 
 
 ## Results
