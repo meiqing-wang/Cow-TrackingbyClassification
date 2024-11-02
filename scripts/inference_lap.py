@@ -2,11 +2,6 @@
     This is the script to call when you want to run a real-time inference
     on a video of cows.
 
-    Call:
-        python inference.py \
-            -i vid95_1_20230824_141834_cut.mp4 \
-            -o test.mp4
-
 """
 import os
 import cv2

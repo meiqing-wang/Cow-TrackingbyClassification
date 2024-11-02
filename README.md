@@ -64,8 +64,11 @@ After 1,000 epochs, the following results were obtained.
 To run the model on a custom video, the script `inference_lap.py` is called.
 ```sh
 python inference_lap.py \
--i path/to/input_video.mp4 \  # original video
--o path/to/output_video.mp4   # with predicted bounding boxes
+--video_input=input_video.mp4 \    # input video
+--video_output=output_video.mp4 \  # output video with predicted bounding boxes
+--output_file=hypotheses.txt \     # hypotheses, or predicted bounding boxes
+--thresh_1=0.9 \                   # value for threshold 1
+--thresh_2=0.6                     # value for threshold 2
 ```
 
 ## Results
