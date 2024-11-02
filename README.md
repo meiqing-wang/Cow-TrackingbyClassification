@@ -32,13 +32,13 @@ Monitoring individual dairy cattle for behavior, health status, and production i
 
 ## Train
 ### Object detector
-To train the object detector, use the script `train_yolov8.py`.
+To train the **object detector**, use the script `train_yolov8.py`.
 ```sh
 python train_yolov8.py
 ```
 Note that the number of epochs is hardcoded inside the script. The file `det.yaml` contains the path to the training and validation sets. 
 
-The dataset should have the following file structure, as defined in the YOLO doc (https://docs.ultralytics.com/datasets/detect/)
+The **dataset** should have the following file structure, as defined in the YOLO doc (https://docs.ultralytics.com/datasets/detect/)
 ```
 dataset  
 └───train
@@ -55,7 +55,7 @@ dataset
     └───labels
 ```
 
-Labels should follow the YOLO format, i.e., use normalized values with class set to 0 (cow).
+**Labels** should follow the YOLO format, i.e., use normalized values with class set to 0 (cow).
 ```
 class x_center y_center width height
 
@@ -65,7 +65,7 @@ e.g.,
 ```
 
 ### Classifier
-To train the classifier, use the script `train_yolov8-cls.py`.
+To train the **classifier**, use the script `train_yolov8-cls.py`.
 ```sh
 python train_yolov8-cls.py
 ```
@@ -92,7 +92,7 @@ dataset
 
 ## Test
 ### Run the tracking model
-To run the tracking model on a video, use the script `inference_lap.py`.
+To run the **tracking model** on a video, use the script `inference_lap.py`.
 ```sh
 python inference_lap.py \
   --video_input=input_video.mp4 \    # input video
@@ -103,7 +103,7 @@ python inference_lap.py \
 ```
 
 ### Evaluate tracking performance
-The python library `motmetrics` was used to compute the MOT metrics.
+The python library `py-motmetrics` was used to compute the MOT metrics (https://github.com/cheind/py-motmetrics).
 
 To get the MOT metrics of a video, run `master_eval.sh`.
 ```sh
@@ -114,7 +114,7 @@ sh master_eval.sh \
   /video_name                # give a name to the video (required)
 ```
 
-Labels should follow the YOLO format, i.e., use normalized values. This time, class should correspond to the different identities.
+Labels should follow the YOLO format, i.e., use normalized values. This time, the classes should be added and correspond to the identities.
 ```
 class x_center y_center width height
 
