@@ -39,7 +39,7 @@ After 500 epochs, the following results were obtained.
 | YOLOv8s |  500   | 37m    | 0.946 | 0.956 | 98.6%  | 88.0%   | 22.5MB |
 | YOLOv8m |  500   | 50m    | 0.953 | 0.965 | 98.5%  | 89.7%   | 52.0MB |
 | YOLOv8l |  500   | 1h 5m  | 0.958 | 0.963 | 98.3%  | 89.8%   | 87.7MB |
-| YOLOv8x |  500   | 1h 28m | 0.962 | 0.962 | 98.4%  | 89.
+| YOLOv8x |  500   | 1h 28m | 0.962 | 0.962 | 98.4%  | 89.8%   | 137.7MB|
 
 
 ### Classifier
