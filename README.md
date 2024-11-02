@@ -1,11 +1,11 @@
 # Cow-TrackingbyClassification
 
 
-This repository is for the manuscript titled "Continuous Tracking Holstein Dairy Cows in a Free-Stall Barn Using a Tracking-by-Classification Method," submitted to ***Computers and Electronics in Agriculture***. 
+This repository is for the manuscript titled "Continuous Tracking Holstein Dairy Cows in a Free-Stall Barn Using a Tracking-by-Classification Method", submitted to ***Computers and Electronics in Agriculture***. 
 
 Please note that the data is currently unavailable but will be provided once the manuscript is accepted.
 
-The code is built using PyTorch and has been tested on Ubuntu 22.04 environment (Check: Python3.12.4, Ultralytics8.2.58, PyTorch2.3.1, CUDA11.8, cuDNN8.7) with 2*RTX 4090 GPUs. 
+The code is built using PyTorch and has been tested on Ubuntu 22.04 environment (Check: `Python3.12.4`, `Ultralytics8.2.58`, `PyTorch2.3.1`, `CUDA11.8`, `cuDNN8.7`) with 2*RTX 4090 GPUs. 
 
 ## Contents
 - [Cow-TrackingbyClassification](#cow-trackingbyclassification)
@@ -15,9 +15,12 @@ The code is built using PyTorch and has been tested on Ubuntu 22.04 environment 
     - [Object detector](#object-detector)
     - [Classifier](#classifier)
   - [Test](#test)
-    - [Running the inference](#running-the-inference)
+    - [Running the tracking inference](#running-the-tracking-inference)
     - [Evaluating tracking performance](#evaluating-tracking-performance)
   - [Results](#results)
+    - [Object detector](#object-detector-1)
+    - [Classifier](#classifier-1)
+    - [Tracking](#tracking)
   - [Demos](#demos)
     - [Demos of the video during the day](#demos-of-the-video-during-the-day)
   - [Acknowledgements](#acknowledgements)
@@ -35,16 +38,6 @@ python train_yolov8.py
 ```
 Note that the number of epochs is hardcoded inside the script. The file `det.yaml` contains the path to the training and validation sets. 
 
-After 500 epochs, the following results were obtained.
-| Model   | Epochs | Time   |   P   |   R   |  AP50  | AP50-95 |  Size  |
-|---------|--------|--------|-------|-------|--------|---------|--------|
-| YOLOv8n |  500   | 33 m    | 0.957 | 0.948 | 98.3%  | 86.3%   | 6.3MB  |
-| YOLOv8s |  500   | 37 m    | 0.946 | 0.956 | 98.6%  | 88.0%   | 22.5MB |
-| YOLOv8m |  500   | 50 m    | 0.953 | 0.965 | 98.5%  | 89.7%   | 52.0MB |
-| YOLOv8l |  500   | 1 h 5 m  | 0.958 | 0.963 | 98.3%  | 89.8%   | 87.7MB |
-| YOLOv8x |  500   | 1 h 28 m | 0.962 | 0.962 | 98.4%  | 89.8%   | 137.7MB|
-
-
 ### Classifier
 To train the classifier, use the script `train_yolov8-cls.py`.
 ```sh
@@ -52,26 +45,16 @@ python train_yolov8-cls.py
 ```
 Note that the paths to the training and validation sets, and the number of epochs are hardcoded.
 
-After 1,000 epochs, the following results were obtained.
-| Model      | Epochs | Time    | Top1 | Top5 | Size  |
-|------------|--------|---------|------|------|-------|
-| YOLOv8n-cls| 1,000  | 3 h 7 m | 0.873| 0.988| 3.0MB |
-| YOLOv8s-cls| 1,000  | 3 h 21 m  | 0.898| 0.992| 10.3MB|
-| YOLOv8m-cls| 1,000  | 4 h 33 m  | 0.898| 0.993| 31.7MB|
-| YOLOv8l-cls| 1,000  | 6 h 56 m  | 0.917| 0.993| 72.6MB|
-| YOLOv8x-cls| 1,000  | 8 h 5 0m  | 0.916| 0.993| 112.5MB|
-
-
 ## Test
-### Running the inference
-To run the model on a custom video, use the script `inference_lap.py`.
+### Running the tracking inference
+To run the tracking model on a custom video, use the script `inference_lap.py`.
 ```sh
 python inference_lap.py \
---video_input=input_video.mp4 \    # input video
---video_output=output_video.mp4 \  # output video with predicted bounding boxes
---output_file=hypothesis.txt \     # text files containing the predicted bounding boxes (hypothesis)
---thresh_1=0.9 \                   # value for threshold 1
---thresh_2=0.6                     # value for threshold 2
+  --video_input=input_video.mp4 \    # input video
+  --video_output=output_video.mp4 \  # output video with predicted bounding boxes
+  --output_file=hypothesis.txt \     # text files containing the predicted bounding boxes (hypothesis)
+  --thresh_1=0.9 \                   # value for threshold 1
+  --thresh_2=0.6                     # value for threshold 2
 ```
 
 ### Evaluating tracking performance
@@ -87,6 +70,27 @@ sh master_eval.sh \
 ```
 
 ## Results
+### Object detector
+After 500 epochs, the following results were obtained.
+| Model   | Epochs | Time   |   P   |   R   |  AP50  | AP50-95 |  Size  |
+|---------|--------|--------|-------|-------|--------|---------|--------|
+| YOLOv8n |  500   | 33 m    | 0.957 | 0.948 | 98.3%  | 86.3%   | 6.3MB  |
+| YOLOv8s |  500   | 37 m    | 0.946 | 0.956 | 98.6%  | 88.0%   | 22.5MB |
+| YOLOv8m |  500   | 50 m    | 0.953 | 0.965 | 98.5%  | 89.7%   | 52.0MB |
+| YOLOv8l |  500   | 1 h 5 m  | 0.958 | 0.963 | 98.3%  | 89.8%   | 87.7MB |
+| YOLOv8x |  500   | 1 h 28 m | 0.962 | 0.962 | 98.4%  | 89.8%   | 137.7MB|
+
+### Classifier
+After 1,000 epochs, the following results were obtained.
+| Model      | Epochs | Time    | Top1 | Top5 | Size  |
+|------------|--------|---------|------|------|-------|
+| YOLOv8n-cls| 1,000  | 3 h 7 m | 0.873| 0.988| 3.0MB |
+| YOLOv8s-cls| 1,000  | 3 h 21 m  | 0.898| 0.992| 10.3MB|
+| YOLOv8m-cls| 1,000  | 4 h 33 m  | 0.898| 0.993| 31.7MB|
+| YOLOv8l-cls| 1,000  | 6 h 56 m  | 0.917| 0.993| 72.6MB|
+| YOLOv8x-cls| 1,000  | 8 h 5 0m  | 0.916| 0.993| 112.5MB|
+
+### Tracking
 
 ## Demos
 
