@@ -103,7 +103,7 @@ python inference_lap.py \
 ```
 
 ### Evaluate tracking performance
-The python library `py-motmetrics` was used to compute the MOT metrics (https://github.com/cheind/py-motmetrics).
+The python library `py-motmetrics` was used to compute MOT metrics (https://github.com/cheind/py-motmetrics).
 
 To get the MOT metrics of a video, run `master_eval.sh`.
 ```sh
@@ -142,7 +142,7 @@ Results obtained after 1,000 epochs.
 | YOLOv8s-cls| 1,000  | 3 h 21 m  | 0.898| 0.992| 10.3MB|
 | YOLOv8m-cls| 1,000  | 4 h 33 m  | 0.898| 0.993| 31.7MB|
 | YOLOv8l-cls| 1,000  | 6 h 56 m  | 0.917| 0.993| 72.6MB|
-| YOLOv8x-cls| 1,000  | 8 h 5 0m  | 0.916| 0.993| 112.5MB|
+| YOLOv8x-cls| 1,000  | 8 h 50m  | 0.916| 0.993| 112.5MB|
 
 ### Tracking model
 Results obtained on 6 videos of different duration.

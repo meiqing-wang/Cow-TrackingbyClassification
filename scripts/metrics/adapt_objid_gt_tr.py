@@ -13,8 +13,6 @@ python adapt_objid_gt_tr.py
     --output_tr eval/tr_woi.txt
 """
 
-#os.chdir('/home/dalco/boris/dev_test/custom_model')
-
 def parse_args():
     parser = argparse.ArgumentParser(description='')
     parser.add_argument('--gt', type=str, help='txt file')

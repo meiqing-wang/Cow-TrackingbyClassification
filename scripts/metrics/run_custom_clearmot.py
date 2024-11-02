@@ -141,8 +141,6 @@ def compute_tracking_metrics_for_a_sequence(gt_data, pred_data):
 
 # MAIN PART
 args = parse_args()
-#os.chdir('/home/dalco/boris/dev_test/custom_model')
-#os.chdir('/home/dalco/boris/dev_test/custom_model')
 gt = pd.read_csv(args.gt, sep=',', usecols=[i for i in range(6)], header=None)
 tr = pd.read_csv(args.tr, sep=',', usecols=[i for i in range(6)], header=None)
 

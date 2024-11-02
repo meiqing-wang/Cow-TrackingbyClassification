@@ -1,8 +1,6 @@
 import os
 import argparse
 
-#os.chdir('/home/dalco/boris/dev_test/custom_model')
-
 
 def parse_args():
     parser = argparse.ArgumentParser(description='')
