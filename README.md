@@ -38,7 +38,7 @@ python train_yolov8.py
 ```
 Note that the number of epochs is hardcoded inside the script. The file `det.yaml` contains the path to the training and validation sets. 
 
-The **dataset** should have the following file structure, as defined in the YOLO documentation (https://docs.ultralytics.com/datasets/detect/)
+The **dataset** should have the following **file structure**, as defined in the YOLO documentation for **detection** (https://docs.ultralytics.com/datasets/detect/)
 ```
 dataset  
 └───train
@@ -71,7 +71,7 @@ python train_yolov8-cls.py
 ```
 Note that the paths to the training and validation sets, and the number of epochs are hardcoded.
 
-The images of each class, i.e., individual, should follow the following file structure.
+The images of each class, i.e., individual, should follow the following **file structure**, as defined in the YOLO documentation for **classification** (https://docs.ultralytics.com/datasets/classify/)
 ```
 dataset  
 └───train
