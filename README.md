@@ -48,6 +48,16 @@ python train_yolov8-cls.py
 ```
 Note that the paths to the training and validation sets, and the number of epochs are hardcoded.
 
+After 1,000 epochs, the following results were obtained.
+| Model      | Epochs | Time    | Top1 | Top5 | Size  |
+|------------|--------|---------|------|------|-------|
+| YOLOv8n-cls| 1,000  | 3h 7m   | 0.873| 0.988| 3.0MB |
+| YOLOv8s-cls| 1,000  | 3h 21m  | 0.898| 0.992| 10.3MB|
+| YOLOv8m-cls| 1,000  | 4h 33m  | 0.898| 0.993| 31.7MB|
+| YOLOv8l-cls| 1,000  | 6h 56m  | 0.917| 0.993| 72.6MB|
+| YOLOv8x-cls| 1,000  | 8h 50m  | 0.916| 0.993| 112.5MB|
+
+
 ## Test
 ### Running the inference
 
