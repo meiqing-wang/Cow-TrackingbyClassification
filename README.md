@@ -10,6 +10,7 @@ The code is built using PyTorch and has been tested on Ubuntu 22.04 environment 
   - [Contents](#contents)
   - [Introduction](#introduction)
   - [Train](#train)
+    - [Object detector](#object-detector)
   - [Test](#test)
   - [Results](#results)
   - [Demos](#demos)
@@ -22,7 +23,12 @@ Monitoring individual dairy cattle for behavior, health status, and production i
 
 
 ## Train
-
+### Object detector
+To train the object detector, the following script can be used to launch the trainings of each model sizes:
+```sh
+python train_yolov8.py
+```
+Note that the number of epochs is hardcoded. The file `det.yaml` contains the path to the train and val sets. 
 
 ## Test
 
