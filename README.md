@@ -49,13 +49,56 @@ python train_yolov8-cls.py
 Note that the paths to the training and validation sets, and the number of epochs are hardcoded.
 
 After 1,000 epochs, the following results were obtained.
-| Model      | Epochs | Time    | Top1 | Top5 | Size  |
-|------------|--------|---------|------|------|-------|
-| YOLOv8n-cls| 1,000  | 3h 7m   | 0.873| 0.988| 3.0MB |
-| YOLOv8s-cls| 1,000  | 3h 21m  | 0.898| 0.992| 10.3MB|
-| YOLOv8m-cls| 1,000  | 4h 33m  | 0.898| 0.993| 31.7MB|
-| YOLOv8l-cls| 1,000  | 6h 56m  | 0.917| 0.993| 72.6MB|
-| YOLOv8x-cls| 1,000  | 8h 50m  | 0.916| 0.993| 112.5MB|
+<table style="font-size: 0.8em;">
+  <tr>
+    <th>Model</th>
+    <th>Epochs</th>
+    <th>Time</th>
+    <th>Top1</th>
+    <th>Top5</th>
+    <th>Size</th>
+  </tr>
+  <tr>
+    <td>YOLOv8n-cls</td>
+    <td>1,000</td>
+    <td>3h 7m</td>
+    <td>0.873</td>
+    <td>0.988</td>
+    <td>3.0MB</td>
+  </tr>
+  <tr>
+    <td>YOLOv8s-cls</td>
+    <td>1,000</td>
+    <td>3h 21m</td>
+    <td>0.898</td>
+    <td>0.992</td>
+    <td>10.3MB</td>
+  </tr>
+  <tr>
+    <td>YOLOv8m-cls</td>
+    <td>1,000</td>
+    <td>4h 33m</td>
+    <td>0.898</td>
+    <td>0.993</td>
+    <td>31.7MB</td>
+  </tr>
+  <tr>
+    <td>YOLOv8l-cls</td>
+    <td>1,000</td>
+    <td>6h 56m</td>
+    <td>0.917</td>
+    <td>0.993</td>
+    <td>72.6MB</td>
+  </tr>
+  <tr>
+    <td>YOLOv8x-cls</td>
+    <td>1,000</td>
+    <td>8h 50m</td>
+    <td>0.916</td>
+    <td>0.993</td>
+    <td>112.5MB</td>
+  </tr>
+</table>
 
 
 ## Test
