@@ -38,6 +38,22 @@ python train_yolov8.py
 ```
 Note that the number of epochs is hardcoded inside the script. The file `det.yaml` contains the path to the training and validation sets. 
 
+The dataset should have the following structure.
+```
+detection  
+└───train
+│   └───images
+│       │   image_1.png
+│       │   image_2.png
+│           ...
+│   └───labels
+│       │   image_1.txt
+│       │   image_2.txt
+└───val
+    └───images
+    └───labels
+```
+
 ### Classifier
 To train the classifier, use the script `train_yolov8-cls.py`.
 ```sh
