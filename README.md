@@ -38,9 +38,9 @@ python train_yolov8.py
 ```
 Note that the number of epochs is hardcoded inside the script. The file `det.yaml` contains the path to the training and validation sets. 
 
-The dataset should have the following file structure.
+The dataset should have the following file structure, as defined in the YOLO doc (https://docs.ultralytics.com/datasets/detect/)
 ```
-detection  
+dataset  
 └───train
 │   └───images
 │       │   image_1.png
@@ -55,6 +55,15 @@ detection
     └───labels
 ```
 
+Labels should follow the YOLO format, i.e., use normalized values with class set to 0 (cow).
+```
+class x_center y_center width height
+
+e.g.,
+0 0.165088 0.887326 0.251871 0.225347
+0 0.207268 0.561160 0.306168 0.309833
+```
+
 ### Classifier
 To train the classifier, use the script `train_yolov8-cls.py`.
 ```sh
@@ -64,17 +73,21 @@ Note that the paths to the training and validation sets, and the number of epoch
 
 The images of each class, i.e., individual, should follow the following file structure.
 ```
-detection  
+dataset  
 └───train
 │   └───cow_0
+│       │   image_1.png
+│       │   image_2.png
+│       │   image_3.png
+│           ...
 │   └───cow_1
-│   └───cow_2
 │       ...
+│   └───cow_13
 └───val
     └───cow_0
     └───cow_1
-    └───cow_2
         ...
+    └───cow_13
 ```
 
 ## Test
@@ -101,16 +114,25 @@ sh master_eval.sh \
   /video_name                # give a name to the video (required)
 ```
 
+Labels should follow the YOLO format, i.e., use normalized values. This time, class should correspond to the different identities.
+```
+class x_center y_center width height
+
+e.g.,
+0 0.165088 0.887326 0.251871 0.225347
+1 0.207268 0.561160 0.306168 0.309833
+```
+
 ## Results
 ### Object detector
 Results obtained after 500 epochs.
-| Model   | Epochs | Time   |   P   |   R   |  AP50  | AP50-95 |  Size  |
+| Model   | Epochs | Time |   P   |   R   |  AP50  | AP50-95 |  Size  |
 |---------|--------|--------|-------|-------|--------|---------|--------|
-| YOLOv8n |  500   | 33 m    | 0.957 | 0.948 | 98.3%  | 86.3%   | 6.3MB  |
-| YOLOv8s |  500   | 37 m    | 0.946 | 0.956 | 98.6%  | 88.0%   | 22.5MB |
-| YOLOv8m |  500   | 50 m    | 0.953 | 0.965 | 98.5%  | 89.7%   | 52.0MB |
-| YOLOv8l |  500   | 1 h 5 m  | 0.958 | 0.963 | 98.3%  | 89.8%   | 87.7MB |
-| YOLOv8x |  500   | 1 h 28 m | 0.962 | 0.962 | 98.4%  | 89.8%   | 137.7MB|
+| YOLOv8n |  500 | 33 m | 0.957 | 0.948 | 98.3%  | 86.3%   | 6.3MB  |
+| YOLOv8s |  500 | 37 m | 0.946 | 0.956 | 98.6%  | 88.0%   | 22.5MB |
+| YOLOv8m |  500 | 50 m | 0.953 | 0.965 | 98.5%  | 89.7%   | 52.0MB |
+| YOLOv8l |  500 | 1 h 5 m  | 0.958 | 0.963 | 98.3%  | 89.8%   | 87.7MB |
+| YOLOv8x |  500 | 1 h 28 m | 0.962 | 0.962 | 98.4%  | 89.8%   | 137.7MB|
 
 ### Classifier
 Results obtained after 1,000 epochs.
