@@ -2,6 +2,14 @@
     This is the script to call when you want to run a real-time inference
     on a video of cows.
 
+    Call
+    python inference_lap.py \
+        --video_input=input_video.mp4 \    # input video
+        --video_output=output_video.mp4 \  # output video with predicted bounding boxes
+        --output_file=hypotheses.txt \     # text files containing the predicted bounding boxes (hypothesis)
+        --thresh_1=0.9 \                   # value for threshold 1
+        --thresh_2=0.6                     # value for threshold 2
+
 """
 import os
 import cv2
