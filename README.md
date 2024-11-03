@@ -161,8 +161,8 @@ Results obtained on 6 videos of different duration.
 
 ### Demos of the video during the day
 
-The below two short videos show the cows with #1 and #6 were re-indentified correctly when they reappearred in the FOV.
-
+The full-length video demo (1-hour, daytime) can be accessed here: [Full Video Demo](https://drive.google.com/file/d/133jPBBrWl3O0cRraki9zeIU-703AIofC/view?usp=sharing).
+The two short videos below demonstrate that cows with IDs #1 and #6 were correctly re-identified upon re-entering the field of view.
 <div style="display: flex; justify-content: space-around; gap: 20px;">
   
   <!-- First GIF -->
