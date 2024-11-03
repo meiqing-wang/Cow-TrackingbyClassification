@@ -177,20 +177,20 @@ The two short videos below demonstrate that cows with IDs #1 and #6 were correct
 The full-length video demo (1-hour, daytime) can be accessed here: [Full Video Demo](https://drive.google.com/file/d/1X3R91-qqkj-Dg4KkHnZfIZCjKWIsY3qW/view?usp=sharing).
 
 The four short videos below show that the cow with ID #4 was correctly re-identified each time she re-entered the field of view.
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; justify-items: center;">
+<div style="text-align: center;">
     <!-- Row 1 -->
-    <div>
-        <img src="./Demos/NightClip1.gif" alt="Night Clip 1" style="width: 100%; height: auto; max-width: 400px;">
+    <div style="display: inline-block; width: 45%; margin: 10px;">
+        <img src="./Demos/NightClip1.gif" alt="Night Clip 1" style="width: 100%; height: auto;">
     </div>
-    <div>
-        <img src="./Demos/NightClip2.gif" alt="Night Clip 2" style="width: 100%; height: auto; max-width: 400px;">
+    <div style="display: inline-block; width: 45%; margin: 10px;">
+        <img src="./Demos/NightClip2.gif" alt="Night Clip 2" style="width: 100%; height: auto;">
     </div>
     <!-- Row 2 -->
-    <div>
-        <img src="./Demos/NightClip3.gif" alt="Night Clip 3" style="width: 100%; height: auto; max-width: 400px;">
+    <div style="display: inline-block; width: 45%; margin: 10px;">
+        <img src="./Demos/NightClip3.gif" alt="Night Clip 3" style="width: 100%; height: auto;">
     </div>
-    <div>
-        <img src="./Demos/NightClip4.gif" alt="Night Clip 4" style="width: 100%; height: auto; max-width: 400px;">
+    <div style="display: inline-block; width: 45%; margin: 10px;">
+        <img src="./Demos/NightClip4.gif" alt="Night Clip 4" style="width: 100%; height: auto;">
     </div>
 </div>
 
