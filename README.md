@@ -174,7 +174,7 @@ The two short videos below demonstrate that cows with IDs #1 and #6 were correct
 
 ### Nighttime video demos
 
-The full-length video demo (1-hour, daytime) can be accessed here: [Full Video Demo](https://drive.google.com/file/d/1X3R91-qqkj-Dg4KkHnZfIZCjKWIsY3qW/view?usp=sharing).
+The full-length video demo (1-hour, nighttime) can be accessed here: [Full Video Demo](https://drive.google.com/file/d/1X3R91-qqkj-Dg4KkHnZfIZCjKWIsY3qW/view?usp=sharing).
 
 The four short videos below show that the cow with ID #4 was correctly re-identified each time she re-entered the field of view.
 | ![Night Clip 1](./Demos/NightClip1.gif) | ![Night Clip 2](./Demos/NightClip2.gif) |
