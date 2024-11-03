@@ -9,7 +9,6 @@ The code is built using PyTorch and has been tested on Ubuntu 22.04 environment 
 
 ## Contents
 - [Cow-TrackingbyClassification](#cow-trackingbyclassification)
-  - [Contents](#contents)
   - [Introduction](#introduction)
   - [Train](#train)
     - [Object detector](#object-detector)
@@ -159,9 +158,10 @@ Results obtained on 6 videos of different duration.
 
 ## Demos
 
-### Demos of the video during the day
+### Daytime video demos
 
 The full-length video demo (1-hour, daytime) can be accessed here: [Full Video Demo](https://drive.google.com/file/d/133jPBBrWl3O0cRraki9zeIU-703AIofC/view?usp=sharing).
+
 The two short videos below demonstrate that cows with IDs #1 and #6 were correctly re-identified upon re-entering the field of view.
 <div style="display: flex; justify-content: space-around; gap: 20px;">
   
@@ -170,6 +170,28 @@ The two short videos below demonstrate that cows with IDs #1 and #6 were correct
 
   <!-- Second GIF -->
   <img src="./Demos/DayClip2.gif" alt="DayClip2 GIF" width="45%">
+</div>
+
+### Nighttime video demos
+
+The full-length video demo (1-hour, daytime) can be accessed here: [Full Video Demo](https://drive.google.com/file/d/1X3R91-qqkj-Dg4KkHnZfIZCjKWIsY3qW/view?usp=sharing).
+
+The four short videos below show that the cow with ID #4 was correctly re-identified each time she re-entered the field of view.
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    <!-- Row 1 -->
+    <div style="flex: 1 1 45%; max-width: 45%;">
+        <img src="./Demos/NightClip1.gif" alt="Night Clip 1" style="width: 100%; height: auto;">
+    </div>
+    <div style="flex: 1 1 45%; max-width: 45%;">
+        <img src="./Demos/NightClip2.gif" alt="Night Clip 2" style="width: 100%; height: auto;">
+    </div>
+    <!-- Row 2 -->
+    <div style="flex: 1 1 45%; max-width: 45%;">
+        <img src="./Demos/NightClip3.gif" alt="Night Clip 3" style="width: 100%; height: auto;">
+    </div>
+    <div style="flex: 1 1 45%; max-width: 45%;">
+        <img src="./Demos/NightClip4.gif" alt="Night Clip 4" style="width: 100%; height: auto;">
+    </div>
 </div>
 
 ## Acknowledgements
