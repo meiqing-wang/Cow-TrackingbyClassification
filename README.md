@@ -182,3 +182,5 @@ The four short videos below show that the cow with ID #4 was correctly re-identi
 | ![Night Clip 3](./Demos/NightClip3.gif) | ![Night Clip 4](./Demos/NightClip4.gif) |
 
 ## Acknowledgements
+
+Thanks to the AgroVet-Strickhof team led by Dr. Melissa Terranova and to the barn staff man-aged by Mirjam Klöppel, for the help in data collection. Thanks to the labelers, Sumin Li, Xiaqi Ma, Yixin Zhang, Zhibo Zeng, and Xinjie Zhao.
