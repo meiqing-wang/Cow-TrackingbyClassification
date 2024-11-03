@@ -21,7 +21,8 @@ The code is built using PyTorch and has been tested on Ubuntu 22.04 environment 
     - [Classifier](#classifier-1)
     - [Tracking model](#tracking-model)
   - [Demos](#demos)
-    - [Demos of the video during the day](#demos-of-the-video-during-the-day)
+    - [Daytime video demos](#daytime-video-demos)
+    - [Nighttime video demos](#nighttime-video-demos)
   - [Acknowledgements](#acknowledgements)
 
 ## Introduction
