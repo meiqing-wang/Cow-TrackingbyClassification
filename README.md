@@ -163,19 +163,7 @@ Results obtained on 6 videos of different duration.
 
 The below two short videos show the cows with #1 and #6 were re-indentified correctly when they reappearred in the FOV.
 
-<div style="display: flex; justify-content: space-around; gap: 20px;">
-  <!-- First Video -->
-  <video controls width="45%">
-    <source src="https://raw.githubusercontent.com/meiqing-wang/Cow-TrackingbyClassification/main/Demos/DayClip1.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-  <!-- Second Video -->
-  <video controls width="45%">
-    <source src="https://raw.githubusercontent.com/meiqing-wang/Cow-TrackingbyClassification/main/Demos/DayClip2.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
-
+- [Video 1: DayClip1.mp4](https://raw.githubusercontent.com/meiqing-wang/Cow-TrackingbyClassification/main/Demos/DayClip1.mp4)
+- [Video 2: DayClip2.mp4](https://raw.githubusercontent.com/meiqing-wang/Cow-TrackingbyClassification/main/Demos/DayClip2.mp4)
 
 ## Acknowledgements
