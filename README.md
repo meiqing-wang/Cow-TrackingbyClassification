@@ -1,7 +1,7 @@
 # Cow-TrackingbyClassification
 
 
-This repository is for the manuscript titled "Continuous Tracking Holstein Dairy Cows in a Free-Stall Barn Using a Tracking-by-Classification Method", submitted to ***Expert Systems With Applications***. 
+This repository is for the manuscript titled "Continuous Tracking Holstein Dairy Cows in a Free-Stall Barn Using a Tracking-by-Classification Method", submitted to ***Biosystems Engineering***. 
 
 Please note that the data is currently unavailable but will be provided once the manuscript is accepted.
 
